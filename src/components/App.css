@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+
+.titulo{
+    position: relative;
+    color: #fff;
+    margin: 5em 0 auto;
+    right: 10em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    letter-spacing: 2px; 
+}
+.text-corpo{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    margin: 5em auto;
+    width: 50em;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font-size: 18px;
+    letter-spacing: 2px;
+}

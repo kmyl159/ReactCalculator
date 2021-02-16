@@ -1,0 +1,104 @@
+*{
+    border-radius: 15px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #091921;
+}
+
+.calculadora{
+    margin-top: 20vh;
+    background:linear-gradient(90deg, #284a5a,#043c52 );
+    padding: 10px;
+    width: 300px;
+    height: 500px;
+    border-radius: 5px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.calculadora .campo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-size: 29px;
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.calculadora .row{
+    height: 380px;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    
+}
+.calculadora  .row .row-column .numeros{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+
+.calculadora .row .row-column .numeros button{
+    height: 76px;
+    width: 73.3px;
+}
+.calculadora .row .row-column .numeros button:last-child{
+    width: 146.7px;
+}
+
+
+.calculadora .row .column,
+.calculadora .row .column .operadores{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.calculadora .row .column .operadores{
+    height: 100%;
+}
+.calculadora .row .column .operadores button{
+    height: 100%;
+}
+
+.calculadora button.equal{
+    background: #03b1ff;
+}
+.calculadora .btn-apagar{
+    text-align: right;
+    background: #ff3077;
+}
+.calculadora button:active{
+    background: #74ff3b;
+    color: #111; 
+}
+.calculadora button{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #0c2835;
+    text-transform: uppercase;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 22px;
+    border: none;
+    outline: none;
+}
