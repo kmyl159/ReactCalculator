@@ -46,16 +46,34 @@ export default function CalcBtns(){
   function AC(){
     setData("")
   }
-  function Equalitate(){
+  function Verifica(){
     try{
+      var indice = 0
+      const array = data.split("")
+      const sin = ['+', '-', '*', '/'];
+    
+      if(data === ""){
+        return data;
+      }
+      array.forEach(item =>{
+        sin.forEach(sinal =>{
+          if(array[0] === '0' && array[1] !== '.'){
+            array.splice(0, 1)
+            setData(array.join(''))
+          }
+          if((item === sinal) &&(array[indice+1] === '0' )&&( array[indice+2] !== '.')){
+            array.splice(indice +1, 1)
+            setData(array.join(''))
+          }
+        })
+        indice++
+      })
       setData(
         String(eval(data)).length > 3 &&
           String(eval(data)).includes(".") 
-            ? String(eval(data).toFixed(4))
-              : String(eval(data))
-
-
-      )
+          ? String(eval(data).toFixed(4))
+          : String(eval(data))
+          )
     }catch(err){
       console.log(err)
     }
@@ -81,7 +99,7 @@ export default function CalcBtns(){
           <div className="column" >
             <div className="operadores">
               {calcSinals}
-              <button className='equal' onClick={()=>Equalitate()}>
+              <button className='equal' onClick={()=>Verifica()}>
                 =
               </button>
             </div>
